@@ -1,0 +1,60 @@
+.guitaraFooter {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #781d7d, #20233d);
+    color: #fff;
+    /* position: absolute; */
+    /* bottom: 0; */
+}
+
+.footerStyle {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: url('./images/stars.png');
+    background-size: cover;
+    gap: 20px;
+}
+
+.guitaraInfo ul li{
+    list-style: none;
+    margin-bottom: 7px;
+}
+.guitaraInfo h1{
+    text-align: center;
+    margin-bottom: 13px;
+}
+.contact{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.contact a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.copyRight{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.copyRight a{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .footerStyle {
+        flex-direction: column;
+    }
+}

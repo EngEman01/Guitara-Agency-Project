@@ -1,0 +1,127 @@
+
+.guitaraNavbar {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #781d7d, #20233d);
+}
+
+.guitaraBackground {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('./images/stars.png');
+    background-size: cover;
+    padding: 0 20px; 
+}
+
+.guitaraLogo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: 80px;
+}
+
+.links ul {
+    display: flex;
+    gap: 25px;
+}
+
+.links ul li {
+    list-style: none;
+}
+
+.links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.5s ease-in;
+}
+
+.elementLink{
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s ease-in;
+}
+
+.elementLink:hover{
+    transform: scale(1.1);
+}
+
+.elementLink::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #781d7d;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s;
+}
+
+.elementLink:hover::before {
+    transform: scaleX(1.05);
+    color: #20233d;
+    transform-origin: bottom left;
+}
+
+/* Mobile toggleMenu Menu */
+.toggleMenu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.toggleMenu span {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Hide links on mobile */
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    /* Show toggleMenu on mobile */
+    .toggleMenu {
+        display: flex;
+    }
+
+    /* Show links when menu is toggled */
+    .links.showMenu {
+        display: block;
+        position: absolute;
+        top: 93px;
+        left: 0;
+        width: 100%;
+        background-color: #20233d;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links ul li a {
+        font-size: 22px;
+        color: #fff;
+    }
+}
