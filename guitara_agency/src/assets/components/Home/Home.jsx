@@ -1,12 +1,5 @@
+// import React from 'react'
 import GuitaraHome from "./Home.module.css";
-import { clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs) {
-  return twMerge(clsx(inputs));
-}
-
-
 
 export default function Home() {
   return (
@@ -39,10 +32,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-        {/******************************  Guitara Services *****************************************************/}
-
-        <div className={GuitaraHome.guitaraServices}></div>
 
         {/******************************  Guitara About Us *****************************************************/}
         <div className={GuitaraHome.guitaraAbout}>
@@ -82,14 +71,82 @@ export default function Home() {
             />
           </div>
         </div>
+        
+        {/******************************  Guitara Services *****************************************************/}
 
+        <div className={GuitaraHome.guitaraServices}>
+          <div className={GuitaraHome.ServicesText}>
+            <h1>Our Services</h1>
+            <h4>
+              We offer tailored solutions to help you create engaging,
+
+              high-quality content that resonates with your audience. Whether
+<br />
+              you're looking to grow your online presence, boost engagement, or
+
+              communicate your brand story, our services are designed to meet
+              your needs.
+            </h4>
+          </div>
+
+          <div className={GuitaraHome.ourServices}>
+            <div className={GuitaraHome.servicesBox}>
+              <h3>Content Writing</h3>
+              <p>
+                We specialize in crafting compelling and creative written
+                content for various social media platforms. 
+                Our services include: Blog Posts & Articles: Thoughtful and informative
+                articles that drive traffic and engagement.
+                 Social Media Posts:
+                Tailored, catchy content for platforms like Instagram, Facebook,
+                Twitter, and LinkedIn.
+                 Product Descriptions: Clear and
+                persuasive descriptions to highlight the best features of your
+                products.
+              </p>
+            </div>
+            <div className={GuitaraHome.servicesBox}>
+              <h3>Content Writing</h3>
+              <p>
+                We specialize in crafting compelling and creative written
+                content for various social media platforms. 
+                Our services include: Blog Posts & Articles: Thoughtful and informative
+                articles that drive traffic and engagement.
+                 Social Media Posts:
+                Tailored, catchy content for platforms like Instagram, Facebook,
+                Twitter, and LinkedIn.
+                 Product Descriptions: Clear and
+                persuasive descriptions to highlight the best features of your
+                products.
+              </p>
+            </div>
+            <div className={GuitaraHome.servicesBox}>
+              <h3>Content Writing</h3>
+              <p>
+                We specialize in crafting compelling and creative written
+                content for various social media platforms. 
+                Our services include: Blog Posts & Articles: Thoughtful and informative
+                articles that drive traffic and engagement.
+                 Social Media Posts:
+                Tailored, catchy content for platforms like Instagram, Facebook,
+                Twitter, and LinkedIn.
+                 Product Descriptions: Clear and
+                persuasive descriptions to highlight the best features of your
+                products.
+              </p>
+            </div>
+          </div>
+        </div>
+<div className={GuitaraHome.image}>
+<img src="./images/20190621134439-Examples-of-Social-Media-Business-Ideas-Bigstock-4000pxW-X-2670pxH-copy.webp" alt="" />
+</div>
         {/******************************  Guitara Testimonials *****************************************************/}
 
         <div className={GuitaraHome.Testimonials}>
           <div className={GuitaraHome.TestimonialsTitle}>
             <h1>Testimonials</h1>
             <h4>
-            Guitara Agency helped us grow our Instagram following by over 50%
+              Guitara Agency helped us grow our Instagram following by over 50%
               in just six months! Their team is knowledgeable, responsive, and
               truly cares about our success.
             </h4>
@@ -97,7 +154,7 @@ export default function Home() {
           <div className={GuitaraHome.TestimonialsBody}>
             <div className={GuitaraHome.TestimonialBox}>
               <h4>
-              ’’ Working with Guitara Agency has been a game-changer for my
+                ’’ Working with Guitara Agency has been a game-changer for my
                 affiliate marketing journey. The platform is user-friendly,
                 offers great commissions, and the support team is always there
                 to help.’’
@@ -111,7 +168,7 @@ export default function Home() {
           <div className={GuitaraHome.TestimonialsBody}>
             <div className={GuitaraHome.TestimonialBox}>
               <h4>
-              ’’Guitara Agency provides a wide range of marketing tools that
+                ’’Guitara Agency provides a wide range of marketing tools that
                 have significantly boosted my affiliate sales. The training
                 programs are top-notch, and I have seen a substantial increase
                 in my earnings since joining.’’
@@ -125,7 +182,7 @@ export default function Home() {
           <div className={GuitaraHome.TestimonialsBody}>
             <div className={GuitaraHome.TestimonialBox}>
               <h4>
-              ’’I am impressed by the professionalism and commitment of the
+                ’’I am impressed by the professionalism and commitment of the
                 Guitara Agency team. They go above and beyond to ensure their
                 clients success, and I have experienced remarkable growth in my
                 business.
