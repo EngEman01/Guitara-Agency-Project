@@ -85,8 +85,9 @@ height: 100vh;
     min-height: 100vh;
     display: flex;
     /* align-items: center; */
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
+    gap: 60px;
     background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg');
     /* background: #f3e4f5; */
 }

@@ -1,10 +1,11 @@
 .ShippingPage {
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
     display: flex;
-    /* align-items: center; */
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    gap: 10px;
     background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg');
     /* background: #f3e4f5; */
 }
