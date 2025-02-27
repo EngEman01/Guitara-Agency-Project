@@ -1,12 +1,9 @@
-.distributorsStylePage{
+/* .distributorsStylePage{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    /* align-items: center; */
     justify-content: space-around;
-    /* flex-direction: column; */
     background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg');
-    /* background: #f3e4f5; */
 }
 
 .distributorsOption{
@@ -30,6 +27,7 @@
 
 .distributorsContent {
     width: 100%;
+    direction: rtl;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +37,6 @@
 
 .distributorsContent h1{
     text-transform: capitalize;
-    /* text-decoration: underline; */
     color: #3a204f;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
@@ -54,7 +51,6 @@
     transition: transform 0.5s;
 }
 
-/* Additional styling for the animated text container */
 .animatedTextContainer {
 display: flex;
 justify-content: center;
@@ -62,7 +58,17 @@ align-items: center;
 height: 100vh;
 }
 
-
+.distributorsBtn{
+    cursor: pointer;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    background:  url("./images/stars.png") ,linear-gradient(to left, #962a9b, #494e7b);
+    background-size: cover;
+    box-shadow: 5px 5px 10px 0px #8c40b8;
+}
 @media (max-width: 480px) {
     .distributorsStylePage{
         flex-direction: column;
@@ -71,4 +77,79 @@ height: 100vh;
     }
 
 }
-  
+   */
+
+
+   .distributorsStylePage {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    flex-direction: column;
+    background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg');
+    /* background: #f3e4f5; */
+}
+
+.distributorsOption {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.distributorsLink {
+    text-decoration: none;
+    color: #333;
+}
+
+.distributorsContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.distributorsContent h1 {
+    text-transform: capitalize;
+    color: #3a204f;
+}
+
+.distributorsContent ol{
+    direction: rtl;
+    margin-bottom: 10px;
+}
+.distributorsContent li {
+    direction: rtl;
+    margin-bottom: 10px;
+}
+
+.distributorsBtn {
+    cursor: pointer;
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    background:  url("./images/stars.png") ,linear-gradient(to left, #962a9b, #494e7b);
+    background-size: cover;
+    box-shadow: 5px 5px 10px 0px #8c40b8;
+}
+
+.distributorsContent h1 {
+    text-transform: none; /* Maintain original text casing */
+    color: #3a204f;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove padding if necessary */
+}
+
+@media (max-width: 480px) {
+    .distributorsStylePage {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+}

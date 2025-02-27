@@ -280,13 +280,15 @@ export default function Shipping() {
     return (
         <div className={ShippingStyle.ShippingPage}>
             <div className={ShippingStyle.ShippingOption}>
-                <Link to="/Shipping" className={ShippingStyle.ShippingLink}>
-                    <h1>Shipping</h1>
+                <Link to="/distributors" className={ShippingStyle.ShippingLink}>
+                    <button className={ShippingStyle.ShippingBtn}>نظام الوكالة</button>
                 </Link>
 
-                <Link to="/distributors" className={ShippingStyle.ShippingLink}>
-                    <h1>Broadcasters</h1>
+                <Link to="/Shipping" className={ShippingStyle.ShippingLink}>
+                    <button className={ShippingStyle.ShippingBtn}>الشحن</button>
                 </Link>
+
+
             </div>
             <div className={ShippingStyle.ShippingContent}>
                 <div className={ShippingStyle.ShippingImage}>
@@ -362,7 +364,7 @@ export default function Shipping() {
                                     alt="WhatsApp"
                                     className={ShippingStyle.WhatsAppIcon}
                                 />
-                                <p>Contact us with WhatsApp</p>
+                                {/* <p>Contact us with WhatsApp</p> */}
                             </a>
                         </div>
                     )}

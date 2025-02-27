@@ -1,4 +1,4 @@
-.guitaraNavbar {
+/* .guitaraNavbar {
     width: 100%;
     padding: 10px;
     align-items: center;
@@ -6,9 +6,13 @@
     background: linear-gradient(to right, #781d7d, #20233d);
     box-shadow: 0px 10px 30px #e7b9ea;
     position: relative;
-    z-index: 100; /* Ensure navbar appears on top of other elements */
+    z-index: 100;
+    transition: background 0.25s ease-in;
 }
 
+.guitaraNavbar:hover {
+    background: linear-gradient(to left, #781d7d, #20233d);
+}
 
 .guitaraBackground {
     width: 100%;
@@ -29,36 +33,78 @@
 
 .logoImage {
     width: 80px;
-    animation: moving 2s steps(30) 1s forwards, blink 1.75s step-end infinite;
+    animation: moving 2s steps(30) 1s forwards, blink 1.75s step-end infinite, float 3s ease-in-out infinite;
+    transition: transform 0.6s ease-in-out;
+}
+
+.logoImage:hover {
+    transform: rotate(360deg) scale(1.1);
 }
 
 @keyframes moving {
     0% {
         transform: translateX(0px);
     }
-
     50% {
         transform: translateX(100px);
     }
-
     75% {
         transform: translateX(-50px);
     }
-
     100% {
         transform: translateX(0px);
     }
 }
 
-.guitaraLogo h2{
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.guitaraLogo h2 {
     font-size: 2rem;
     color: #181a24;
     -webkit-text-stroke: 1px #fff;
     text-transform: uppercase;
     position: relative;
+    animation: textShadowAnimation 3s ease-in-out infinite, bounce 1.5s ease-in-out infinite, pulse 1.5s ease-in-out infinite;
 }
 
-.guitaraLogo h2::before{
+@keyframes textShadowAnimation {
+    0% {
+        text-shadow: 0px 0px 5px #a137a6;
+    }
+    50% {
+        text-shadow: 0px 0px 15px #a137a6, 0px 0px 30px #781d7d;
+    }
+    100% {
+        text-shadow: 0px 0px 5px #a137a6;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.guitaraLogo h2::before {
     content: attr(data-text);
     width: 50%;
     height: 100%;
@@ -66,102 +112,25 @@
     color: #a137a6;
     text-shadow: 8px 0 12px #000;
     -webkit-text-stroke: 0.5px #fff;
-    /* border-right: 2px solid #2db750; */
     overflow: hidden;
     animation: track 4s linear infinite;
 }
 
 @keyframes track {
-    0% ,10% {
+    0%, 10% {
         width: 0;
     }
-    70% , 90%, 100%{
+    70%, 90%, 100% {
         width: 100%;
     }
 }
 
-/* .guitaraLogo h2 {} */
-
-
-.links ul {
-    display: flex;
-    gap: 25px;
-}
-
-.links ul li {
-    list-style: none;
-}
-
-.links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    transition: 0.5s ease-in;
-}
-
-.elementLink {
-    text-transform: capitalize;
-    font-weight: 600;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    transition: 0.5s ease-in;
-}
-
-.elementLink:hover {
-    transform: scale(1.1);
-}
-
-.elementLink::before {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #781d7d;
-    transform: scale(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s;
-}
-
-.elementLink:hover::before {
-    transform: scaleX(1.05);
-    color: #20233d;
-    transform-origin: bottom left;
-}
-
-/* Mobile toggleMenu Menu */
-.toggleMenu {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.toggleMenu span {
-    width: 30px;
-    height: 4px;
-    background-color: #fff;
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-
-    /* Hide links on mobile */
     .links {
         display: none;
         width: 100%;
     }
 
-    /* Show toggleMenu on mobile */
-    .toggleMenu {
-        display: flex;
-    }
-
-    /* Show links when menu is toggled */
     .links.showMenu {
         display: block;
         position: absolute;
@@ -185,22 +154,195 @@
 }
 
 @media (max-width: 480px) {
-    
-.guitaraLogo {
-    padding: 15px 5px;
-    flex-direction: column;
-    gap: 10px;
+    .guitaraLogo {
+        padding: 15px 5px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .guitaraLogo span {
+        font-size: 2rem;
+    }
 }
+
+@media (max-width: 350px) {
+    .guitaraLogo h2 {
+        font-size: 28px;
+    }
+} */
+
+
+.guitaraNavbar {
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(to right, #781d7d, #20233d);
+    box-shadow: 0px 10px 30px #e7b9ea;
+    position: relative;
+    z-index: 100;
+    transition: background 0.25s ease-in;
+}
+
+.guitaraNavbar:hover {
+    background: linear-gradient(to left, #781d7d, #20233d);
+}
+
+.guitaraBackground {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('./images/stars.png');
+    background-size: cover;
+    padding: 0 20px;
+}
+
+.guitaraLogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logoImage {
+    width: 80px;
+    animation: float 3s ease-in-out infinite, zoomIn 1.5s ease-in-out infinite alternate;
+    transition: transform 0.6s ease-in-out;
+}
+
+.logoImage:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.guitaraLogo h2 {
+    font-size: 2rem;
+    color: #181a24;
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    position: relative;
+    animation: textShadowAnimation 3s ease-in-out infinite, float 2s ease-in-out infinite alternate;
+}
+
+@keyframes textShadowAnimation {
+    0% {
+        text-shadow: 0px 0px 5px #a137a6;
+    }
+    50% {
+        text-shadow: 0px 0px 15px #a137a6, 0px 0px 30px #781d7d;
+    }
+    100% {
+        text-shadow: 0px 0px 5px #a137a6;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.guitaraLogo h2::before {
+    content: attr(data-text);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    color: #a137a6;
+    text-shadow: 8px 0 12px #000;
+    -webkit-text-stroke: 0.5px #fff;
+    overflow: hidden;
+    animation: track 4s linear infinite;
+}
+
+@keyframes track {
+    0%, 10% {
+        width: 0;
+    }
+    70%, 90%, 100% {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none;
+        width: 100%;
+    }
+
+    .links.showMenu {
+        display: block;
+        position: absolute;
+        top: 93px;
+        left: 0;
+        width: 100%;
+        background-color: #20233d;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links ul li a {
+        font-size: 22px;
+        color: #fff;
+    }
+}
+
+@media (max-width: 480px) {
+    .guitaraLogo {
+        padding: 15px 5px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .guitaraLogo span {
         font-size: 2rem;
     }
 
+    .guitaraLogo h2{
+        text-align: center;
+        font-size: 25px;
+    }
 }
+
 @media (max-width: 350px) {
-    
-.guitaraLogo h2{
-    font-size: 28px;
-}
-
-
+    .guitaraLogo h2 {
+        font-size: 28px;
+    }
 }

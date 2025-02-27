@@ -295,6 +295,7 @@ export default function Footer() {
           </div>
 
           <div className={GuitaraFooter.copyRight}>
+            <span></span>
             <h5>©2025 GuitaraGroup | All Rights Reserved</h5>
           </div>
         </div>
