@@ -5,6 +5,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Shipping from './assets/components/Shipping/Shipping';
+import Distributors from './assets/components/Distributors/Distributors';
 
 
 const router = createBrowserRouter([
@@ -16,6 +18,15 @@ const router = createBrowserRouter([
         path: "",
         element: <Home />,
       },
+      {
+        path: "/Shipping",
+        element: <Shipping/>,
+      },
+      {
+        path: "/distributors",
+        element: <Distributors/>,
+      },
+    
     ],
   },
 ]);

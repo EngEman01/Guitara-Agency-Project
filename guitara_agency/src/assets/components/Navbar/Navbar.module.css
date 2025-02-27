@@ -1,11 +1,14 @@
-
 .guitaraNavbar {
     width: 100%;
     padding: 10px;
-    display: flex;
     align-items: center;
+    display: flex;
     background: linear-gradient(to right, #781d7d, #20233d);
+    box-shadow: 0px 10px 30px #e7b9ea;
+    position: relative;
+    z-index: 100; /* Ensure navbar appears on top of other elements */
 }
+
 
 .guitaraBackground {
     width: 100%;
@@ -14,17 +17,71 @@
     justify-content: space-between;
     background: url('./images/stars.png');
     background-size: cover;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .guitaraLogo {
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .logoImage {
     width: 80px;
+    animation: moving 2s steps(30) 1s forwards, blink 1.75s step-end infinite;
 }
+
+@keyframes moving {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    75% {
+        transform: translateX(-50px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.guitaraLogo h2{
+    font-size: 2rem;
+    color: #181a24;
+    -webkit-text-stroke: 1px #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.guitaraLogo h2::before{
+    content: attr(data-text);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    color: #a137a6;
+    text-shadow: 8px 0 12px #000;
+    -webkit-text-stroke: 0.5px #fff;
+    /* border-right: 2px solid #2db750; */
+    overflow: hidden;
+    animation: track 4s linear infinite;
+}
+
+@keyframes track {
+    0% ,10% {
+        width: 0;
+    }
+    70% , 90%, 100%{
+        width: 100%;
+    }
+}
+
+/* .guitaraLogo h2 {} */
+
 
 .links ul {
     display: flex;
@@ -42,7 +99,7 @@
     transition: 0.5s ease-in;
 }
 
-.elementLink{
+.elementLink {
     text-transform: capitalize;
     font-weight: 600;
     font-size: 25px;
@@ -53,7 +110,7 @@
     transition: 0.5s ease-in;
 }
 
-.elementLink:hover{
+.elementLink:hover {
     transform: scale(1.1);
 }
 
@@ -92,6 +149,7 @@
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+
     /* Hide links on mobile */
     .links {
         display: none;
@@ -124,4 +182,25 @@
         font-size: 22px;
         color: #fff;
     }
+}
+
+@media (max-width: 480px) {
+    
+.guitaraLogo {
+    padding: 15px 5px;
+    flex-direction: column;
+    gap: 10px;
+}
+    .guitaraLogo span {
+        font-size: 2rem;
+    }
+
+}
+@media (max-width: 350px) {
+    
+.guitaraLogo h2{
+    font-size: 28px;
+}
+
+
 }

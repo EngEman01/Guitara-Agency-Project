@@ -1,30 +1,45 @@
 .guitaraFooter {
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #781d7d, #20233d);
+    /* background: linear-gradient(to right, #781d7d, #20233d); */
     color: #fff;
-    /* position: absolute; */
-    /* bottom: 0; */
 }
 
 .footerStyle {
-    padding: 30px;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background: url('./images/stars.png');
     background-size: cover;
     gap: 20px;
 }
 
-.guitaraInfo ul li{
+.footerContactUs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.footerContactUs ul li{
     list-style: none;
     margin-bottom: 7px;
 }
-.guitaraInfo h1{
+
+.footerContactUs h1{
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 17px;
 }
+
+.footerContactUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .contact{
     cursor: pointer;
     display: flex;
@@ -38,9 +53,44 @@
     color: #fff;
 }
 
+.socialMedia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMediaIcons{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contentSocialMediaIcons{
+    display: flex;
+    gap: 10px;
+}
+
+.countryStats{
+    /* color: #20233d; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.countryStatsSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
 .copyRight{
-    margin-top: 20px;
-    margin-bottom: 15px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,9 +98,22 @@
     gap: 10px;
 }
 
+.copyRight span{
+    width: 40%;
+    height: 1px;
+    margin: 3px 0px;
+    background-color: #fff;
+}
+
 .copyRight a{
-    margin-right: 10px;
+    /* margin-right: 10px; */
     cursor: pointer;
+}
+.icons{
+    transition: 0.5s ease-in-out;
+}
+.icons:hover{
+ transform: translateY(-7px);
 }
 
 @media (max-width: 480px) {

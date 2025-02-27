@@ -1,6 +1,6 @@
 .homeStyle {
     width: 100%;
-    padding: 30px 0;
+    /* padding: 30px 0; */
     background-color: #f3e2f5bf;
 }
 
@@ -81,6 +81,30 @@
     background: url('./images/home-slider-slide-2.jpg');
 }
 
+
+/* Styles for the Image Slider */
+.guitaraImage {
+    width: 100%;
+    height: 620px; /* Set a fixed height for the container */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .homeImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+    transition: opacity 1s ease-in-out; /* Smooth transition effect */
+  }
+  
+  /* Optional: Add more CSS styles to ensure responsiveness */
+  @media (max-width: 768px) {
+    .guitaraImage {
+      height: 300px; /* Adjust for smaller screens */
+    }
+  }
+  
+
 /******************* the section of About  ********************/
 
 .guitaraAbout{
@@ -139,7 +163,7 @@
 
 .ServicesText h1 {
     margin-bottom: 30px;
-    border-bottom: 2px solid #32375c;
+    /* border-bottom: 2px solid #32375c; */
 }
 
 .ourServices {
@@ -153,8 +177,9 @@
 
 .servicesBox {
     padding: 50px;
-    background-color: #b246b8;
     color: #fff;
+    background-color: #b246b8;
+    /* background-color: #8e4075; */
     border: 1px solid #fff;
     border-radius: 15px;
     cursor: pointer;
@@ -167,6 +192,28 @@
     width: 100svw;
     height: 50vh;
 }
+
+h1 {
+    /* font-size: 7rem;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue'; */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    /* line-height: 5.9rem; */
+  }
+  
+  .char {
+    transform: translateY(115px);
+    transition: transform 0.5s;
+  }
+  
+  /* Additional styling for the animated text container */
+  .animatedTextContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
 /* Add responsiveness for smaller screens */
 @media screen and (max-width: 768px) {
     .ourServices {
@@ -231,7 +278,25 @@
     padding: 50px 30px;
     border-radius: 20px;
     background: #962a9b;
+    background: linear-gradient(to left, #962a9b, #494e7b);
+    box-shadow: 15px 20px 20px #543256;
     color: #fff;
+    animation: moving 3s steps(40) 1s forwards, blink 1.75s step-end infinite;
+}
+
+@keyframes moving {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    75%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 .TestimonialBox p{

@@ -1,0 +1,94 @@
+/* Default styles for larger screens */
+.hexagonPage {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hexagon {
+    width: 230px;
+    height: 230px;
+    background-color: #000;
+    position: relative;
+    display: inline-block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 10px 10px 10px 50px 10px 22px rgb(255, 145, 0);
+    filter: drop-shadow(50px 10px 22px rgb(255, 145, 0));
+    animation: bomb 3s infinite;
+}
+
+.hexagon:first-child{
+    animation: bomb 2s infinite;
+}
+
+.hexagon:last-child{
+    animation: bomb 4s infinite;
+}
+
+/* Animation for large screens */
+@keyframes bomb {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    80% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Animation for mobile screens */
+@keyframes bomb2 {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    80% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+/* Apply different animation on mobile devices */
+@media (max-width: 480px) {
+    .hexagon {
+        width: 190px;
+        height: 190px;
+        animation: bomb2 3s ease-in-out infinite; /* Mobile-specific animation */
+        box-shadow: none; /* Optional: Remove shadow for smaller screens */
+        filter: none; /* Optional: Remove filter for smaller screens */
+    }
+
+    .hexagon:first-child{
+        animation: bomb2 2s infinite;
+    }
+    
+    .hexagon:last-child{
+        animation: bomb2 4s infinite;
+    }
+    
+
+    .hexagonPage {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Optional: Styling for the hexagon images */
+.hexagon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
