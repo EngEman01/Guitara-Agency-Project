@@ -71,36 +71,7 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    // Infinite animation for the words "tiktok", "bigo", "mico"
-    const words = ['tiktok', 'bigo', 'mico'];
-
-    // Loop through the words and create an animation for each
-    const wordElement = document.querySelector(`#word-${currentWordIndex}`);
-    if (wordElement) {
-      new SplitType(wordElement, {
-        types: 'chars',
-        tagName: 'span',
-      });
-
-      gsap.fromTo(
-        wordElement.querySelectorAll('.char'),
-        {
-          y: 115, // Initial position (off-screen)
-        },
-        {
-          y: 0, // Final position
-          stagger: 0.1, // Delay between characters
-          duration: 0.5, // Duration for each word
-          onComplete: () => {
-            // Once the animation completes, move to the next word
-            setCurrentWordIndex(prevIndex => (prevIndex + 1) % words.length); // Loop through the words
-          },
-        }
-      );
-    }
-  }, [currentWordIndex]); // This effect runs every time currentWordIndex changes
-
+ 
   return (
     <>
       <div className={GuitaraHome.homeStyle}>
@@ -123,18 +94,7 @@ export default function Home() {
               <Hexagon />
             </div>
 
-            {/* Display words one by one */}
-            {/* <div className={GuitaraHome.wordsContainer}>
-              <h2 id="word-0" style={{ display: currentWordIndex === 0 ? 'block' : 'none' }} >
-                tiktok
-              </h2>
-              <h2 id="word-1" style={{ display: currentWordIndex === 1 ? 'block' : 'none' }} >
-                bigo
-              </h2>
-              <h2 id="word-2" style={{ display: currentWordIndex === 2 ? 'block' : 'none' }} >
-                mico
-              </h2>
-            </div> */}
+            
           </div>
         </div>
       </div>

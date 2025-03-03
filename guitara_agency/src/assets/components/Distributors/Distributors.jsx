@@ -137,7 +137,7 @@ export default function Distributors() {
     return (
         <div className={DistributorsStyle.distributorsStylePage} dir="rtl">
             <div className={DistributorsStyle.distributorsOption}>
-                <Link to="/Shipping" className={DistributorsStyle.distributorsLink}>
+                <Link to="/" className={DistributorsStyle.distributorsLink}>
                     <button className={DistributorsStyle.distributorsBtn}>الشحن</button>
                 </Link>
                 <Link to="/distributors" className={DistributorsStyle.ShippingLink}>
@@ -146,7 +146,7 @@ export default function Distributors() {
             </div>
 
             <div className={DistributorsStyle.distributorsContent}>
-                <h1 id="my-text">الشروط</h1> {/* Ensure this displays correctly */}
+                <h1 id="my-text">الشروط</h1>
                 <ol type="1">
                     <li>المشاهدات بدون مقابل</li>
                     <li>ترندات بدون حدود لحد نفاذ نقاط الوكاله</li>

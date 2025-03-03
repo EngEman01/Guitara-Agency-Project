@@ -1,6 +1,8 @@
 .ShippingPage {
     width: 100%;
     min-height: 100vh;
+    font-family: "Lateef", serif;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +64,7 @@
 }
 
 .ShippingContent label {
-    font-size: 18px;
+    /* font-size: 18px; */
     color: #3a204f;
     display: block;
     margin: 10px 0px;

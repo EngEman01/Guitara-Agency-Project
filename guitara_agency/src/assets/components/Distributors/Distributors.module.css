@@ -83,8 +83,9 @@ height: 100vh;
    .distributorsStylePage {
     width: 100%;
     min-height: 100vh;
+    font-family: "Lateef", serif;
+    font-size: 25px;
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     gap: 60px;

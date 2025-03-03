@@ -271,7 +271,8 @@ export default function Shipping() {
 
     useEffect(() => {
         if (parseFloat(inputAmount1) > 50) {
-            setFreeShippingMessage('Congratulations! You qualify for free shipping.');
+            setFreeShippingMessage('مبروك! لقد تأهلت للشحن المجاني.');
+            // setFreeShippingMessage('Congratulations! You qualify for free shipping.');
         } else {
             setFreeShippingMessage('');
         }
@@ -307,7 +308,7 @@ export default function Shipping() {
 
                 <div className={ShippingStyle.CurrencyConverter}>
                     <div className={ShippingStyle.CurrencyContent}>
-                        <label htmlFor="countrySelect">Select Country:</label>
+                        <label htmlFor="countrySelect">اختر البلد</label>
                         <select
                             id="countrySelect"
                             value={country}
@@ -326,7 +327,7 @@ export default function Shipping() {
                     </div>
 
                     <div className={ShippingStyle.CurrencyContent}>
-                        <label htmlFor="inputAmount1">Enter Amount (100 units):</label>
+                        <label htmlFor="inputAmount1">ادخل عدد العملات</label>
                         <input
                             type="text"
                             id="inputAmount1"
@@ -336,7 +337,7 @@ export default function Shipping() {
                     </div>
 
                     <div className={ShippingStyle.CurrencyContent}>
-                        <label htmlFor="inputAmount2">Converted Amount:</label>
+                        <label htmlFor="inputAmount2">المبلغ الاجمالي بعمله بلدك</label>
                         <input
                             type="text"
                             id="inputAmount2"
