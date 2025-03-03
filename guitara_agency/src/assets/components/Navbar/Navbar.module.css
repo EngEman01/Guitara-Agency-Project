@@ -233,6 +233,10 @@
     }
 }
 
+.guitaraLogo {
+    position: relative;
+}
+
 .guitaraLogo h2 {
     font-size: 2rem;
     color: #181a24;
@@ -263,6 +267,8 @@
     }
 }
 
+
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -275,7 +281,7 @@
     }
 }
 
-.guitaraLogo h2::before {
+ .guitaraLogo h2::before {
     content: attr(data-text);
     width: 50%;
     height: 100%;
@@ -293,6 +299,18 @@
     }
     70%, 90%, 100% {
         width: 100%;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .guitaraLogo h2 {
+        color: #a137a6;
+    }
+    
+    .guitaraLogo h2::before {
+        width: 0%; 
+        animation: none; 
     }
 }
 
