@@ -1,4 +1,3 @@
-
 .hexagonPage {
     width: 100%;
     min-height: 60vh;
@@ -9,12 +8,13 @@
 
 .hexagon {
     width: 300px;
-    height: 420px;
+    height: 450px;
     background-color: #000;
     position: relative;
     display: inline-block;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     clip-path: polygon(52% 7%, 100% 29%, 81% 84%, 93% 100%, 15% 100%, 27% 84%, 5% 31%);
+    /* clip-path: polygon(49% 1%, 110% 23%, 61% 96%, 56% 102%, 3% 39%, 3% 22%); */
     overflow: hidden;
     background-color: black;
     /* animation: bomb 3s infinite; */
@@ -22,12 +22,12 @@
     animation: ramadan 1.5s infinite;
 }
 
-.hexagon:first-child{
+.hexagon:first-child {
     /* animation: bomb 2s infinite; */
     animation: ramadan 1.5s infinite;
 }
 
-.hexagon:last-child{
+.hexagon:last-child {
     /* animation: bomb 4s infinite; */
     animation: ramadan 1.5s infinite;
 }
@@ -36,15 +36,19 @@
     0% {
         transform: rotate(0deg);
     }
+
     50% {
         transform: rotate(20deg);
     }
+
     80% {
         transform: rotate(-20deg);
     }
+
     90% {
         transform: scale(1.05);
     }
+
     100% {
         transform: rotate(0);
     }
@@ -54,12 +58,15 @@
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(60px);
     }
+
     80% {
         transform: translateY(-60px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -70,12 +77,15 @@
     0% {
         transform: translateX(0px);
     }
+
     50% {
         transform: translateX(30px);
     }
+
     80% {
         transform: translateX(-30px);
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -86,21 +96,21 @@
         width: 190px;
         height: 250px;
         /* animation: bomb2 3s ease-in-out infinite;  */
-        animation: ramadan 1.5s ease-in-out infinite; 
-        box-shadow: none; 
+        animation: ramadan 1.5s ease-in-out infinite;
+        box-shadow: none;
         filter: none;
     }
 
-    .hexagon:first-child{
+    .hexagon:first-child {
         /* animation: bomb2 2s infinite; */
         animation: ramadan 1.5s infinite;
     }
-    
-    .hexagon:last-child{
+
+    .hexagon:last-child {
         /* animation: bomb2 4s infinite; */
         animation: ramadan 1.5s infinite;
     }
-    
+
 
     .hexagonPage {
         flex-direction: column;
