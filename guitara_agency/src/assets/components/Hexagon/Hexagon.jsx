@@ -9,11 +9,7 @@ const Hexagon = () => {
     return (
         <>
             <div className="hexagonPage">
-                <div className="hexagon">
-                    <Link to="/mico" onClick={() => handlePlatformClick('mico')}>
-                        <img src='./images/mico aremovebg.png' alt='Not Found' className="hexagon-image wow animate__fadeInUp" />
-                    </Link>
-                </div>
+                
                 <div className="hexagon">
                     <Link to="/bigo" onClick={() => handlePlatformClick('bigo')}>
                         <img src='./images/giphy.gif' alt='Not Found' className="hexagon-image wow animate__fadeInUp" />
@@ -22,6 +18,11 @@ const Hexagon = () => {
                 <div className="hexagon">
                     <Link to="/tiktok" onClick={() => handlePlatformClick('tiktok')}>
                         <img src='./images/tiktokmovin.gif' alt='Not Found' className="hexagon-image wow animate__fadeInUp" />
+                    </Link>
+                </div>
+                <div className="hexagon">
+                    <Link to="/mico" onClick={() => handlePlatformClick('mico')}>
+                        <img src='./images/mico aremovebg.png' alt='Not Found' className="hexagon-image wow animate__fadeInUp" />
                     </Link>
                 </div>
             </div>
