@@ -5,11 +5,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Shipping from './assets/components/Shipping/Shipping';
-import Distributors from './assets/components/Distributors/Distributors';
 import Tiktok from './assets/components/Shipping/tiktok';
 import Mico from './assets/components/Shipping/mico';
 import Bigo from './assets/components/Shipping/bigo';
+import DistributorsBigo from './assets/components/Distributors/DistributorsBigo';
+import DistributorsMico from './assets/components/Distributors/DistributorsMico';
+import DistributorsTiktok from './assets/components/Distributors/DistributorsTiktok';
 
 
 const router = createBrowserRouter([
@@ -34,8 +35,16 @@ const router = createBrowserRouter([
         element: <Bigo/>,
       },
       {
-        path: "/distributors",
-        element: <Distributors/>,
+        path: "/distributorsbigo",
+        element: <DistributorsBigo/>,
+      },
+      {
+        path: "/distributorsmico",
+        element: <DistributorsMico/>,
+      },
+      {
+        path: "/distributorstiktok",
+        element: <DistributorsTiktok/>,
       },
     
     ],

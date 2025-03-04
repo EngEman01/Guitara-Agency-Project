@@ -78,7 +78,7 @@ export default function Bigo() {
     return (
         <div className={ShippingStyle.ShippingPage}>
             <div className={ShippingStyle.ShippingOption}>
-                <Link to="/distributors" className={ShippingStyle.ShippingLink}>
+                <Link to="/distributorsbigo" className={ShippingStyle.ShippingLink}>
                     <button className={ShippingStyle.ShippingBtn}>نظام الوكالة</button>
                 </Link>
 

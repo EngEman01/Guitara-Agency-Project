@@ -101,7 +101,7 @@ import DistributorsStyle from './Distributors.module.css';
 import { useEffect } from "react";
 import { gsap } from 'gsap';
 
-export default function Distributors() {
+export default function DistributorsTiktok() {
     useEffect(() => {
         const target = document.querySelector('#my-text');
         const handleScrollAnimation = (entries, observer) => {
@@ -137,10 +137,10 @@ export default function Distributors() {
     return (
         <div className={DistributorsStyle.distributorsStylePage} dir="rtl">
             <div className={DistributorsStyle.distributorsOption}>
-                <Link to="/" className={DistributorsStyle.distributorsLink}>
+                <Link to="/tiktok" className={DistributorsStyle.distributorsLink}>
                     <button className={DistributorsStyle.distributorsBtn}>الشحن</button>
                 </Link>
-                <Link to="/distributors" className={DistributorsStyle.ShippingLink}>
+                <Link to="/distributorsmico" className={DistributorsStyle.ShippingLink}>
                     <button className={DistributorsStyle.distributorsBtn}>نظام الوكالة</button>
                 </Link>
             </div>
