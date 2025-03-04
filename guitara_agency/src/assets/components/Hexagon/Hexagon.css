@@ -17,17 +17,38 @@
     clip-path: polygon(52% 7%, 100% 29%, 81% 84%, 93% 100%, 15% 100%, 27% 84%, 5% 31%);
     overflow: hidden;
     background-color: black;
-    animation: bomb 3s infinite;
+    /* animation: bomb 3s infinite; */
+    transform: rotate(0deg);
+    animation: ramadan 1.5s infinite;
 }
 
 .hexagon:first-child{
-    animation: bomb 2s infinite;
+    /* animation: bomb 2s infinite; */
+    animation: ramadan 1.5s infinite;
 }
 
 .hexagon:last-child{
-    animation: bomb 4s infinite;
+    /* animation: bomb 4s infinite; */
+    animation: ramadan 1.5s infinite;
 }
 
+@keyframes ramadan {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(20deg);
+    }
+    80% {
+        transform: rotate(-20deg);
+    }
+    90% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
 
 @keyframes bomb {
     0% {
@@ -64,17 +85,20 @@
     .hexagon {
         width: 190px;
         height: 250px;
-        animation: bomb2 3s ease-in-out infinite; 
+        /* animation: bomb2 3s ease-in-out infinite;  */
+        animation: ramadan 1.5s ease-in-out infinite; 
         box-shadow: none; 
         filter: none;
     }
 
     .hexagon:first-child{
-        animation: bomb2 2s infinite;
+        /* animation: bomb2 2s infinite; */
+        animation: ramadan 1.5s infinite;
     }
     
     .hexagon:last-child{
-        animation: bomb2 4s infinite;
+        /* animation: bomb2 4s infinite; */
+        animation: ramadan 1.5s infinite;
     }
     
 
