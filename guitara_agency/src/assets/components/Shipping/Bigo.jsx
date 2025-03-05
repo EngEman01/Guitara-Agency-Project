@@ -175,8 +175,8 @@
 import { Link } from 'react-router-dom';
 import ShippingStyle from './Shipping.module.css';
 import { useEffect, useState } from 'react';
-import countries from './countries.json'; // Import the countries JSON
-import rates from './rates.json'; // Import the rates JSON
+import countries from '../../../../public/countries.json'; // Import the countries JSON
+import rates from '../../../../public/rates.json'; // Import the rates JSON
 
 export default function Bigo() {
     const platform = localStorage.getItem('platform');

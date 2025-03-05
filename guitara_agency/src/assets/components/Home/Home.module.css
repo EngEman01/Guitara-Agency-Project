@@ -1,7 +1,9 @@
 .homeStyle {
     width: 100%;
     /* padding: 30px 0; */
-    background-color: #f3e2f5bf;
+    background: linear-gradient(to right, #ce75dabb, #f3dbf3be), url('./images/home-bg.jpg') no-repeat;
+    /* background: url('./images/home-bg.jpg') no-repeat; */
+    background-size: cover;
 }
 
 /******************* the section of Home  ********************/

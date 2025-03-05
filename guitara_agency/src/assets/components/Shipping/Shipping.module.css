@@ -109,6 +109,37 @@ select {
     width: 40px;
 }
 
+/* Style the <select> dropdown */
+select {
+    background-color: #f0f0f0;
+    border: 2px solid #4b256a;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 200px;
+  }
+  
+  /* Style the <option> elements */
+  option {
+    background-color: #854bb5;
+    color: #fff;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for <option> */
+  option:hover {
+    background-color: #854bb5;
+    color: #fff;
+  }
+  
+  /* Selected option style */
+  option:checked {
+    background-color: #8c40b8;
+    color: white;
+  }
+  
+
 @media (max-width: 480px) {
     .ShippingPage{
         flex-direction: column;
