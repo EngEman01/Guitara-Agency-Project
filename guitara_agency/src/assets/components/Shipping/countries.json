@@ -1,0 +1,13 @@
+
+[
+    { "code": "egypt", "name": "Egypt" },
+    { "code": "saudi", "name": "Saudi Arabia" },
+    { "code": "uae", "name": "UAE" },
+    { "code": "qatar", "name": "Qatar" },
+    { "code": "bahrain", "name": "Bahrain" },
+    { "code": "kuwait", "name": "Kuwait" },
+    { "code": "jordan", "name": "Jordan" },
+    { "code": "oman", "name": "Oman" },
+    { "code": "usa", "name": "USA" },
+    { "code": "cario", "name": "cairo" }
+]

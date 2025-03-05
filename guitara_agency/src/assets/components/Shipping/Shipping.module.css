@@ -8,7 +8,8 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg');
+    background: linear-gradient(to right, #e361f1f1, #ffffffef), url('./images/bg-likes.jpg') no-repeat;
+    background-size: cover;
     /* background: #f3e4f5; */
 }
 

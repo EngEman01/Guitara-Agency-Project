@@ -1,27 +1,16 @@
-
 import { Link } from 'react-router-dom';
 import ShippingStyle from './Shipping.module.css';
 import { useEffect, useState } from 'react';
+import countries from './countries.json'; // Import the countries JSON
+import rates from './rates.json'; // Import the rates JSON
 
-export default function Mico() {
+export default function Bigo() {
     const platform = localStorage.getItem('platform');
 
     const images = {
         tiktok: './images/tiktokmovin.gif',
         bigo: './images/giphy1.gif',
         mico: './images/mico.gif',
-    };
-
-    const rates = {
-        egypt: 100,
-        saudi: 7.00,
-        uae: 6.86,
-        qatar: 6.80,
-        bahrain: 0.70,
-        kuwait: 0.58,
-        jordan: 1.32,
-        oman: 0.72,
-        usa: 1.87,
     };
 
     const [country, setCountry] = useState('usa');
@@ -66,15 +55,13 @@ export default function Mico() {
         }
     };
 
-    useEffect(() => {
-        if (parseFloat(inputAmount1) > 50) {
-            setFreeShippingMessage('مبروك! لقد تأهلت للشحن المجاني.');
-            // setFreeShippingMessage('Congratulations! You qualify for free shipping.');
-        } else {
-            setFreeShippingMessage('');
-        }
-    }, [inputAmount1]);
-
+    // useEffect(() => {
+    //     if (parseFloat(inputAmount1) > 50) {
+    //         setFreeShippingMessage('مبروك! لقد تأهلت للشحن المجاني.');
+    //     } else {
+    //         setFreeShippingMessage('');
+    //     }
+    // }, [inputAmount1]);
     return (
         <div className={ShippingStyle.ShippingPage}>
             <div className={ShippingStyle.ShippingOption}>
@@ -90,34 +77,30 @@ export default function Mico() {
             </div>
             <div className={ShippingStyle.ShippingContent}>
                 <div className={ShippingStyle.ShippingImage}>
-                
-                        <div>
-                            <img
-                                src='./images/mico.gif'
-                                alt={platform}
-                                className={ShippingStyle.ShippingImage}
-                            />
-                        </div>
-                  
+
+                    <div>
+                        <img
+                            src='./images/mico.gif'
+                            alt={platform}
+                            className={ShippingStyle.ShippingImage}
+                        />
+                    </div>
+
                 </div>
 
                 <div className={ShippingStyle.CurrencyConverter}>
                     <div className={ShippingStyle.CurrencyContent}>
-                        <label htmlFor="countrySelect">اختر البلد</label>
+                        <label htmlFor="countrySelect">اختر الدولة</label>
                         <select
                             id="countrySelect"
                             value={country}
                             onChange={handleCountryChange}
                         >
-                            <option value="egypt">Egypt</option>
-                            <option value="saudi">Saudi Arabia</option>
-                            <option value="uae">UAE</option>
-                            <option value="qatar">Qatar</option>
-                            <option value="bahrain">Bahrain</option>
-                            <option value="kuwait">Kuwait</option>
-                            <option value="jordan">Jordan</option>
-                            <option value="oman">Oman</option>
-                            <option value="usa">USA</option>
+                            {countries.map((country) => (
+                                <option key={country.code} value={country.code}>
+                                    {country.name}
+                                </option>
+                            ))}
                         </select>
                     </div>
 
@@ -127,7 +110,7 @@ export default function Mico() {
                             type="text"
                             id="inputAmount1"
                             value={inputAmount1}
-                            onChange={handleInputAmount1Change} // Update and convert
+                            onChange={handleInputAmount1Change}
                         />
                     </div>
 
@@ -138,7 +121,7 @@ export default function Mico() {
                             id="inputAmount2"
                             value={inputAmount2}
                             onChange={(e) => handleTextInput(e, setInputAmount2)}
-                            onBlur={handleConvertInput2} // Convert on blur
+                            onBlur={handleConvertInput2}
                         />
                     </div>
 

@@ -12,8 +12,10 @@
   position: relative;
   margin: 0 ;
   padding: 0;
-  background: #f3e4f5;
-  /* background: linear-gradient(to right, #e361f1e9, #ffffffe6), url('./images/background.jpg'); */
+  /* background: #f3e4f5; */
+  background: linear-gradient(to right, #f3e4f5ab, #ffffff9d), url('./images/all-bg.jpg') no-repeat;
+  background: url('./images/home-bg.jpg') no-repeat;
+  background-size: cover;
 }
 
 ::selection{

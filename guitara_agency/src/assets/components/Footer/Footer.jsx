@@ -51,12 +51,12 @@ export default function Footer() {
               <h1>Contact Us</h1>
               <ul>
                 <li className={GuitaraFooter.contact}>
-                  <a href="https://wa.me/1282020076" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/01205067299" target="_blank" rel="noopener noreferrer">
                     <FaWhatsapp size={20} color="#fff" />
                   </a>
                   <span>
-                    <a href="https://wa.me/1282020076" target="_blank" rel="noopener noreferrer">
-                      +20 1282020076
+                    <a href="https://wa.me/01205067299" target="_blank" rel="noopener noreferrer">
+                      +20 1205067299
                     </a>
                   </span>
                 </li>
